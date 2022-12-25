@@ -1,37 +1,44 @@
-class QuestionModel {
+class QuestionModell {
   String questionText = "";
   String questionImage = "";
   bool isCorrect = false;
+  String theme = "";
 
-  QuestionModel(
+  QuestionModell(
       {required this.questionText,
       required this.questionImage,
-      required this.isCorrect});
+      required this.isCorrect,
+      required this.theme});
+
+  String getThemeImage() {
+    return theme;
+  }
+
+  void setTheme(String t) {
+    theme = t;
+  }
 
   String getQuestionText() {
     return questionText;
   }
 
-  String changerQuestionText(String qT) {
+  void setQuestionText(String qT) {
     questionText = qT;
-    return this.getQuestionText();
   }
 
   String getQuestionImage() {
     return questionImage;
   }
 
-  String changerQuestionImage(String qI) {
+  void setQuestionImage(String qI) {
     questionImage = qI;
-    return this.questionImage;
   }
 
-  bool getReponse() {
+  bool getReponseQuestion() {
     return isCorrect;
   }
 
-  bool changerReponse(bool r) {
+  void setReponse(bool r) {
     isCorrect = r;
-    return this.getReponse();
   }
 }
